@@ -49,6 +49,7 @@ Token Lexer::getNextToken() {
         case '-': return {MINUS, 0};
         case '*': return {MUL, 0};
         case '/': return {DIV, 0};
+        case ';': return {SEMICOLON, 0, ""};
         default: return {INVALID, 0};
     }
 }

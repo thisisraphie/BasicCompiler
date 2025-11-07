@@ -65,13 +65,25 @@ double Parser::statement() {
         }
 
     } else {
-        double value = expr();
-        if (current.type == END) eat(END);
-        return value;
+    double value = expr();
+    cout << value << endl;   // <-- print the result
+    if (current.type == END) eat(END);
+    return value;
     }
 }
 
 
 double Parser::parse() {
-    return statement();
-}
+    while (current.type != END)
+    {
+        statement();
+        if (current.type == SEMICOLON) {
+            eat(SEMICOLON);
+        }else if(current.type != END){
+            cerr << "Syntax error: Expected ';' or end of input." << endl; //error handling
+            exit(1);
+        }
+    }
+    return 0;
+}   
+

@@ -5,7 +5,7 @@
 using namespace std;
 
 enum TokenType {
-    NUMBER, PLUS, MINUS, MUL, DIV, PRINT, STRING, END, INVALID
+    NUMBER, PLUS, MINUS, MUL, DIV, PRINT, STRING, SEMICOLON, END, INVALID
 };
 
 struct Token {

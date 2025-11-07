@@ -6,7 +6,6 @@
 using namespace std;
 
 int main() {
-    cout << "Enter expression: ";
     string input;
     getline(cin, input);
 
@@ -14,9 +13,6 @@ int main() {
     Parser parser(lexer);
 
     double result = parser.parse();
-    cout << "Result: " << result << endl;
-
-    parser.parse();
 
     return 0;
 }
