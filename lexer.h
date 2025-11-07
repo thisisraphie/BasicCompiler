@@ -5,12 +5,13 @@
 using namespace std;
 
 enum TokenType {
-    NUMBER, PLUS, MINUS, MUL, DIV, END, INVALID
+    NUMBER, PLUS, MINUS, MUL, DIV, PRINT, STRING, END, INVALID
 };
 
 struct Token {
     TokenType type;
-    double value; // used if type == NUMBER
+    double value; // used if type == NUMBER 
+    std::string text; // used if type == STRING
 };
 
 class Lexer {

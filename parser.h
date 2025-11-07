@@ -2,6 +2,7 @@
 #define PARSER_H
 
 #include "lexer.h"
+#include <iostream>
 
 class Parser {
     Lexer lexer;
@@ -11,6 +12,7 @@ class Parser {
     double factor();
     double term();
     double expr();
+    double statement();
 
 public:
     Parser(Lexer lex);

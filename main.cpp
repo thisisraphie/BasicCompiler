@@ -16,5 +16,8 @@ int main() {
     double result = parser.parse();
     cout << "Result: " << result << endl;
 
+    parser.parse();
+
     return 0;
 }
+    
